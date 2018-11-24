@@ -5,7 +5,10 @@
     <title></title>
   </head>
   <body>
-    Share this link with your friend : {{ room_url }}
-    <a href={{ room_url }}>BUTTON</a>
+    {{ url }}
+    <form method="post">
+      {{ xo_field }}
+      <input type="submit" value="end turn">
+    </form>
   </body>
 </html>
