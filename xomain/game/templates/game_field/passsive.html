@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/passive.css' %}">
+    <meta http-equiv="refresh" content="0;url=http://foobar.somewhereelse.com/">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {{ url }}
+    <form method="post">
+      {% csrf_token %}
+      <table class="board">
+        <tr>
+          <td class="{{ 1_vis }}"><input class="radio" type="radio" name="board" value="1"></td>
+          <td class="{{ 2_vis }}"><input class="radio" type="radio" name="board" value="2"></td>
+          <td class="{{ 3_vis }}"><input class="radio" type="radio" name="board" value="3"></td>
+        </tr>
+        <tr>
+          <td class="{{ 4_vis }}"><input class="radio" type="radio" name="board" value="4"></td>
+          <td class="{{ 5_vis }}"><input class="radio" type="radio" name="board" value="5"></td>
+          <td class="{{ 6_vis }}"><input class="radio" type="radio" name="board" value="6"></td>
+        </tr>
+        <tr>
+          <td class="{{ 7_vis }}"><input class="radio" type="radio" name="board" value="7"></td>
+          <td class="{{ 8_vis }}"><input class="radio" type="radio" name="board" value="8"></td>
+          <td class="{{ 9_vis }}"><input class="radio" type="radio" name="board" value="9"></td>
+        </tr>
+      </table>
+      <input type="submit" value="end turn">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+html{
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+
+table, th, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 20px;
+  font-size: xx-large;
+}
+
+.empty{
+  background: white;
+}
+
+.empty > input{
+  display: none;
+}
+
+.x{
+  background: red;
+}
+.x:before{
+  content: "X";
+}
+
+.x > input{
+  display: none;
+}
+
+.o{
+  background: red;
+}
+.o:before{
+  content: "O";
+}
+
+.o > input{
+  display: none;
+}
